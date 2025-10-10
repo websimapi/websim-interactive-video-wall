@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#video-wall-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    touch-action: none;
+    user-select: none;
+}
+
+.video-item {
+    width: 320px;
+    height: 180px;
+    position: absolute;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    transform-origin: center center;
+    transition: box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#info-overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    pointer-events: none;
+}
+
+#info-overlay p {
+    margin: 5px 0;
+}
+
